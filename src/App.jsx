@@ -24,8 +24,8 @@ function App() {
       <h1 className="font-bold text-3xl text-center mt-12">
         Course Registration
       </h1>
-      <main className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 mt-8 mx-16 gap-6">
-        <section className=" col-span-3 grid grid-cols-1 xl:grid-cols-3 gap-6">
+      <main className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 my-8 mx-6 xl:mx-16 gap-y-6 md:gap-6">
+        <section className="xl:col-span-3 grid grid-cols-1 xl:grid-cols-3 gap-6">
           {courses.map((course) => (
             <Course
               key={course.id}
