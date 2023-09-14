@@ -6,6 +6,7 @@ import Cart from "./components/Cart";
 function App() {
   const [courses, setCourses] = useState([]);
   const [cart, setCart] = useState([]);
+  // const [credits, setCredits] = useState(0);
 
   useEffect(() => {
     fetch("courses.json")
