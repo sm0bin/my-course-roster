@@ -1,31 +1,21 @@
 import PropTypes from "prop-types";
-import CartItems from "./CartItems";
 
-const Cart = ({ cart }) => {
-  //   const { credit, price } = cart;
-
-  const totalCreditHour = cart.reduce((accumulator, item) => {
-    return accumulator + item.credit;
-  }, 0);
-  const totalPrice = cart.reduce((accumulator, item) => {
-    return accumulator + item.price;
-  }, 0);
-
+const Cart = ({ totalCredits, remainingCredits, totalPrice, courseNames }) => {
   return (
     <div className="rounded-xl p-6 bg-white h-auto">
       <h2 className="font-bold text-xl text-blue-500">
-        Credit Hour Remaining {20 - totalCreditHour} hr
+        Credit Hour Remaining {remainingCredits} hr
       </h2>
       <hr className="my-4" />
       <h2 className="font-bold text-2xl mb-5">Course Name</h2>
       <ol className="list-decimal list-inside leading-8 text-lg text-slate-600">
-        {cart.map((cartItem) => (
-          <CartItems key={cartItem.id} cartItem={cartItem.title} />
+        {courseNames.map((courseName, index) => (
+          <li key={index}>{courseName}</li>
         ))}
       </ol>
       <hr className="mt-6 mb-4" />
       <h4 className="font-medium text-slate-700 text-lg">
-        Total Credit Hour : {totalCreditHour}
+        Total Credit Hour : {totalCredits}
       </h4>
       <hr className="my-4" />
       <h3 className="font-semibold text-slate-700 text-lg">
@@ -36,7 +26,10 @@ const Cart = ({ cart }) => {
 };
 
 Cart.propTypes = {
-  cart: PropTypes.array,
+  totalCredits: PropTypes.number,
+  remainingCredits: PropTypes.number,
+  totalPrice: PropTypes.number,
+  courseNames: PropTypes.array,
 };
 
 export default Cart;
