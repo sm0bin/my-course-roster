@@ -26,4 +26,4 @@ Below state updates occur when user clicks the 'Select' button, triggering the `
 
 ---
 
-### Visit the Live Webpage Here: [Course Registration](https://github.com/programming-hero-web-course2/my-course-roster-sm0bin)
+### Visit the Live Webpage Here: [Course Registration](https://course-registration-sm.surge.sh)
